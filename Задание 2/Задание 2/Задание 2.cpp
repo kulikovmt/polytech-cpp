@@ -1,5 +1,6 @@
 ﻿
 #include <iostream>
+
 using namespace std;
 
 
@@ -14,7 +15,6 @@ int main()
     int year = 2003;
     const float m = 2.3;
     const string w = "Windows";
-
 
 
     cout << "x = " << x << "\n";
