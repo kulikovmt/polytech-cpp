@@ -1,5 +1,4 @@
 
-
 #include <iostream>
 
 using namespace std;
@@ -7,8 +6,7 @@ using namespace std;
 
 int main()
 {
-
-	int var = 123; // инициализация переменной var числом 123
+	int var = 123; 
 	int* ptrvar = &var;
 	cout << "*ptrvar = " << *ptrvar << endl;
 	cout << "ptrvar = " << ptrvar << endl;
@@ -20,13 +18,10 @@ int main()
 	int i;
 	for (i = 0; i < 3; i++)
 	{
-		cout << "Array[" << i << "] = " << f[i] << endl;
+		cout << "Array[" << i << "] = " << *(f+i) << endl;
 	}
 	i = 100;
 	int* const P = &i;
 	*P = 987;
 	cout << "P = " << *P << endl;
-
-
-
 }
