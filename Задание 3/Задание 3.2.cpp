@@ -1,18 +1,17 @@
-
 #include <iostream>
 
 
 using namespace std;
 
-void  SummArray(int* arr, int* summ, int size)
+void  SummArray(int* begin, int* end)
 {
-
-	for (int i = 0; i < size; i++)
+	int summ = 0;
+	for (int* i = begin; i < end; i++)
 	{
-		*summ += *(arr + i);
+		summ += *i ;
+		
 	}
-
-	cout << "SumArray: " << *summ << endl;
+	cout << summ << endl;
 
 }
 
@@ -34,11 +33,11 @@ void Difference(int* x, int* y)
 
 void Char(char* z, int* ykazX, int* ykazY)
 {
-	if (*z == 43)
+	if (*z == '+')
 	{
 		Summ(ykazX, ykazY);
 	}
-	if (*z == 45)
+	if (*z == '-')
 	{
 		Difference(ykazX, ykazY);
 	}
@@ -46,25 +45,21 @@ void Char(char* z, int* ykazX, int* ykazY)
 
 int main()
 {
-	const int size = 5;
-	int arr[size] = { 3,5,3,2,5 };
+	int arr[5] = { 3,5,3,2,5 };
 	int summ = 0;
 	int* psumm = &summ;
-	int* pa = &arr[0];
-	int* po = &arr[4];
-	SummArray(pa, psumm, size);
+	int* begin = &arr[0];
+	int* end = &arr[5];
+	SummArray(begin, end);
 
 	int x = 4;
 	int y = 8;
 	int* ykazX = &x;
 	int* ykazY = &y;
-	char z = 45;
+	char z = '+';
 	Char(&z, ykazX, ykazY);
 
-	float* f = new float[3];
-	cout << f << endl;
-	delete[] f;
-
-
-
+	float* f = new float(1.5);
+	cout << *f << endl;
+	delete f;
 }
