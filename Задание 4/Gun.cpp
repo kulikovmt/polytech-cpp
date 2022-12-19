@@ -26,6 +26,21 @@
         cout << "\n" << "----------Delete Gun Information----------" << "\n" << endl;
 
     }
+    string Gun::getName() {
+        return this->name;
+    }
+
+    float Gun::getWeight() {
+        return this->weight;
+    }
+
+    float Gun::getDamage() {
+        return this->damage;
+    }
+
+    void Gun::setDamage(float damage) {
+        this->damage = damage;;
+    }
 
     bool Gun::MaxWeight(float maxWeight) {
         return maxWeight >= this->weight;
