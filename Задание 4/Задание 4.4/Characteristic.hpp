@@ -10,6 +10,5 @@ public:
 	Characteristic(float);
 
 public:
-	// #7
 	float getDamage(Gun&);
 };
